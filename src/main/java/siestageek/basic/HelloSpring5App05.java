@@ -22,6 +22,7 @@ public class HelloSpring5App05 {
     // 스프링을 이용한 개발의 필수 요건은 인터페이스 기반 설계임
 
     // 추가 라이브러리
+    // https://repo.spring.io/ui/native/release/org/springframework/spring
     // spring-core, spring-beans
 
     // 실행원리
