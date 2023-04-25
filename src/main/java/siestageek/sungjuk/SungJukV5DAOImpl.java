@@ -1,6 +1,7 @@
 package siestageek.sungjuk;
 
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -8,7 +9,7 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
-@Component("sjdao")
+@Repository("sjdao")
 public class SungJukV5DAOImpl implements SungJukV4DAO {
 
     private String insertSQL = "insert into sungjuk (name,kor,eng,mat,tot,avg,grd) values (?,?,?,?,?,?,?)";

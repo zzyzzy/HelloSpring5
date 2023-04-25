@@ -1,5 +1,8 @@
 package siestageek.sungjuk;
 
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.FileSystemXmlApplicationContext;
+
 public class SungJukV5Main {
     // 성적 처리프로그램 v5
     // 배열과 클래스, 인터페이스, 예외처리, 컬렉션, JDBC, Spring를 이용해서
@@ -14,7 +17,12 @@ public class SungJukV5Main {
     // 0. 프로그램 종료
 
     public static void main(String[] args) {
-        SungJukV1cService sjsrv = new SungJukV5ServiceImpl();
+        ApplicationContext ctx =
+            new FileSystemXmlApplicationContext(
+                    "src/sungjuk.xml");
+
+        SungJukV1cService sjsrv =
+                (SungJukV5ServiceImpl) ctx.getBean("sjsrv");
 
         while (true) {
             int menu = sjsrv.displayMenu();

@@ -1,7 +1,5 @@
 package siestageek.sungjuk;
 
-import zzyzzy.poject.sungjuk.model.SungJukVO;
-
 import java.util.List;
 
 public interface SungJukV4DAO {
